@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-const ReactDOM = require('react-dom');
-const Router = require('react-router').Router;
-const Route = require('react-router').Route;
-const First = require('./components/First');
+const Search = require('./components/Search');
+const All = require('./components/All');
 
 class App extends Component {
   
@@ -14,7 +11,8 @@ class App extends Component {
         <div className="title">
           <h1>React Pokedex</h1>
         </div>
-        <First/>
+        <All />
+        <Search/>
       </div>
     );
   }

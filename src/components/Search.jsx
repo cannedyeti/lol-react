@@ -1,23 +1,21 @@
 const React = require('react');
 require ('dotenv').config()
 var Pokemon = require('./Pokemon');
-const secret = process.env.REACT_APP_CLIENT_SECRET
-const id = process.env.REACT_APP_CLIENT_ID
+// const secret = process.env.REACT_APP_CLIENT_SECRET
+// const id = process.env.REACT_APP_CLIENT_ID
 
-
-class First extends React.Component{
+class Search extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
       pokemon: '',
-
     }
     this.submit = this.submit.bind(this);
     this.reset = this.reset.bind(this);
   }
   submit() {
     const userTerm = document.getElementById('userTerm');
-    this.setState({pokemon: userTerm.value})
+    this.setState({pokemon: userTerm.value.toLowerCase()})
   }
   reset() {
     this.setState({
@@ -27,7 +25,6 @@ class First extends React.Component{
 
   render() {
     const pokemon = this.state.pokemon;
-
     return (
       <div className="search">
         {!pokemon && <input id="userTerm" type="text" />}
@@ -39,5 +36,5 @@ class First extends React.Component{
   }
 };
 
-module.exports = First;
+module.exports = Search;
 

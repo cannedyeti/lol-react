@@ -9,4 +9,13 @@
 li {
   list-style-type: none;
   text-decoration: none;
+  margin: 5px;
+}
+
+ul {
+  margin: 0 auto;
+  padding: 0;
+  height: 300px;
+  width: 200px;
+  overflow-y: scroll;
 }
